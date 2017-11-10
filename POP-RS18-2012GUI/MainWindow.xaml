@@ -1,0 +1,19 @@
+﻿<Window x:Class="POP_RS18_2012GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="570" Width="525" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Name="lbNamestaj" SelectionChanged="lbNamestaj_SelectionChanged" SelectedItem="0"/>
+        <Button Grid.Row="1" Content="Dodaj" Height="40" Width="80" Margin="26,26,411,29" Click="DodajNamestaj"/>
+        <Button Grid.Row="1" Content="Izmeni" Height="40" Width="80" Margin="147,26,290,29" Click="Izmeni"/>
+        <Button Grid.Row="1" Content="Obrisi" Height="40" Width="80" Margin="296,26,141,29"/>
+        <Button Grid.Row="1" Content="Izaji" Height="40" Width="80" Margin="411,26,26,29" Click="Izadji"/>
+
+
+
+    </Grid>
+</Window>
