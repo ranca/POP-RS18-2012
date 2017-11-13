@@ -18,16 +18,16 @@ namespace POP_RS18_2012.Model
 
         public string Sifra { get; set; }
 
-        public double Jedinicna_cena { get; set; }
+        public double Cena { get; set; }
 
-        public int Kolicina_u_magacinu { get; set; }
+        public int KolicinaUMagacinu { get; set; }
 
         public int TipNamestajaId { get; set; }
 
-        //public override string tostring()
-        //{
-        //    return $"{ naziv}, { cena }, {tipnamestaja }";
-        //}
+        public override string ToString()
+        {
+            return $"{ Naziv}, { Cena }, { TipNamestajaId }";
+        }
 
         public static Namestaj GetById(int id)
         {

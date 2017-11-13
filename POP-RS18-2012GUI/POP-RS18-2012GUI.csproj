@@ -109,9 +109,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Data\nametaj.xml" />
+    <Resource Include="Data\namestaj.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\tipoviNamestaja.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

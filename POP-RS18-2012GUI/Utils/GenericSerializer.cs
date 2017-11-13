@@ -16,7 +16,7 @@ namespace POP_RS18_2012GUI.Utils
             try
             {
                 var serializer = new XmlSerializer(typeof(List<T>));
-                using (var sw = new StreamWriter($@"../../Dats/{fileName}"))
+                using (var sw = new StreamWriter($@"../../Data/{fileName}"))
                 {
                     serializer.Serialize(sw, listToSerialize);
                 }
@@ -33,7 +33,7 @@ namespace POP_RS18_2012GUI.Utils
             try
             {
                 var serializer = new XmlSerializer(typeof(List<T>));
-                using (var sr = new StreamReader($@"../../Dats/{fileName}"))
+                using (var sr = new StreamReader($@"../../Data/{fileName}"))
                 {
                     return (List<T>)serializer.Deserialize(sr);
                 }

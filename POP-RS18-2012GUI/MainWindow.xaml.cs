@@ -24,8 +24,8 @@ namespace POP_RS18_2012GUI
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
-            InitializeComponent();
+        {          
+                InitializeComponent();
 
             OsveziPrikaz();
         }
@@ -36,7 +36,11 @@ namespace POP_RS18_2012GUI
 
             foreach (var namestaj in Projekat.Instance.Namestaj)
             {
-                lbNamestaj.Items.Add(namestaj);
+                if(namestaj.Obrisan == false)
+                {
+                    lbNamestaj.Items.Add(namestaj);
+                }
+
             }
         }
 
@@ -52,10 +56,13 @@ namespace POP_RS18_2012GUI
             var noviNamestaj = new Namestaj()
             {
                 Naziv = ""
+              
             };
 
             var namestajProzor = new NamestajWindow(noviNamestaj, NamestajWindow.Operacija.DODAVANJE);
-            namestajProzor.Show();
+            namestajProzor.ShowDialog();
+
+            OsveziPrikaz();
 
         }
 
@@ -66,6 +73,34 @@ namespace POP_RS18_2012GUI
 
         private void Izmeni(object sender, RoutedEventArgs e)
         {
+            var izabraniNamestaj = (Namestaj)lbNamestaj.SelectedItem;
+            var NamestajProzor = new NamestajWindow(izabraniNamestaj, NamestajWindow.Operacija.IZMENA);
+            NamestajProzor.ShowDialog();
+
+            OsveziPrikaz();
+
+        }
+
+        private void ObrisiDugme(object sender, RoutedEventArgs e)
+        {
+            var izabraniNamestaj = (Namestaj)lbNamestaj.SelectedItem;
+            var listaNamestaja = Projekat.Instance.Namestaj;
+
+            if (MessageBox.Show($"Da li zelite da obrisete: {izabraniNamestaj.Naziv }", "Brisanje", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                foreach(var n in listaNamestaja)
+                {
+                    if(n.Id == izabraniNamestaj.Id)
+                    {
+                        n.Obrisan = true;
+                    }
+                }
+
+                Projekat.Instance.Namestaj = listaNamestaja;
+
+                OsveziPrikaz();
+
+            }
 
         }
     }

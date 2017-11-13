@@ -21,6 +21,10 @@ namespace POP_RS18_2012.Model
             this.Naziv = Naziv;
             this.Obrisan = Obrisan;
         }
+        public override string ToString()
+        {
+            return Naziv;
+        }
 
         public TipNamestaja()
         {

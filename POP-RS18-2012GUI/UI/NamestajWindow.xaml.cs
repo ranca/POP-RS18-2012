@@ -47,46 +47,88 @@ namespace POP_RS18_2012GUI.UI
             this.operacija = operacija;
 
             this.tbNaziv.Text = namestaj.Naziv;
+            this.tbSifra.Text = namestaj.Sifra;
+            this.tbCena.Text = namestaj.Cena.ToString();
+            
+
+            foreach (var tipNamestaja in Projekat.Instance.TipNamestaja)
+            {
+                cbTipNamestaja.Items.Add(tipNamestaja);
+            }
+
+            foreach (TipNamestaja tipNamestaja in cbTipNamestaja.Items)
+            {
+
+                if (tipNamestaja.Id == namestaj.TipNamestajaId)
+                {
+                    cbTipNamestaja.SelectedItem = tipNamestaja;
+                    break;
+                }
+            }
         }
 
-        private void Izadji(object sender, RoutedEventArgs e)
+        private void IzadjiBtn(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        //private void SacuvajIzmene(object sender, RoutedEventArgs e)
-        //{
-        //    var listaNamestaja = Projekat.Instance.Namestaj;
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-        //    switch (operacija) 
-        //    {
-        //        case Operacija.DODAVANJE:
-        //            var noviNamestaj = new Namestaj()
-        //            {
-        //                Id = listaNamestaja.Count + 1,
-        //                Naziv = this.tbNaziv.Text
+        }
 
-        //            };
+        private void SacuvajBtn(object sender, RoutedEventArgs e)
+        {
+            var listaNamestaja = Projekat.Instance.Namestaj;
+            var izabraniTipNamestaja = (TipNamestaja)cbTipNamestaja.SelectedItem;
+                      
+
+            switch (operacija)
+            {
+                case Operacija.DODAVANJE:
+                    var konCena = double.Parse(tbCena.Text);
+                    var noviNamestaj = new Namestaj()
+                    {
+
+                        Id = listaNamestaja.Count + 1,
+                        Naziv = this.tbNaziv.Text,
+                        Sifra = this.tbSifra.Text,
+                        Cena = konCena,
+    
+                        TipNamestajaId = izabraniTipNamestaja.Id                        
+                    };
                     
-        //            listaNamestaja.Add(noviNamestaj);
-        //            break;
+                    listaNamestaja.Add(noviNamestaj);
+                    break;
 
-        //        case Operacija.IZMENA:
-        //            foreach(var n in listaNamestaja)
-        //            {
-        //                if(n.Id == namestaj.Id)
-        //                {
-        //                    n.Naziv = this.tbNaziv.Text;
-        //                    break;
-        //                }
-        //            }
+                case Operacija.IZMENA:
+                    foreach (var n in listaNamestaja)
+                    {
+                        var konCena1 = double.Parse(tbCena.Text);
+                        if (n.Id == namestaj.Id)
+                        {
+                            tbCena.Text = double.Parse(tbCena.Text).ToString();
+                            n.Naziv = this.tbNaziv.Text;
+                            n.Sifra = this.tbSifra.Text;
+                            n.Cena = konCena1;
+                            n.TipNamestajaId = izabraniTipNamestaja.Id;
+                            break;
+                        }
+                    }
 
-        //            break;
+                    break;
 
-        //    }
-        //    Projekat.Instance.Namestaj = listaNamestaja;
+            }
+            Projekat.Instance.Namestaj = listaNamestaja;
 
-            //this.Close();
-       // }
+            this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+
     }
 }

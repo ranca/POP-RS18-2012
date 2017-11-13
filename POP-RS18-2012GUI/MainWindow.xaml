@@ -7,10 +7,10 @@
             <RowDefinition Height="89*"/>
             <RowDefinition Height="19*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="0" Name="lbNamestaj" SelectionChanged="lbNamestaj_SelectionChanged" SelectedItem="0"/>
+        <ListBox Grid.Row="0" Name="lbNamestaj" SelectedItem="0"/>
         <Button Grid.Row="1" Content="Dodaj" Height="40" Width="80" Margin="26,26,411,29" Click="DodajNamestaj"/>
         <Button Grid.Row="1" Content="Izmeni" Height="40" Width="80" Margin="147,26,290,29" Click="Izmeni"/>
-        <Button Grid.Row="1" Content="Obrisi" Height="40" Width="80" Margin="296,26,141,29"/>
+        <Button Grid.Row="1" Content="Obrisi" Height="40" Width="80" Margin="296,26,141,29" Click="ObrisiDugme"/>
         <Button Grid.Row="1" Content="Izaji" Height="40" Width="80" Margin="411,26,26,29" Click="Izadji"/>
 
 
