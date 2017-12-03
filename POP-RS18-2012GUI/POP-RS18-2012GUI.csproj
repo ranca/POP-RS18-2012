@@ -54,11 +54,47 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Projekat.cs" />
+    <Compile Include="UI\DodatnaUslugaWindow.xaml.cs">
+      <DependentUpon>DodatnaUslugaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DodavanjaIzmenaAkcijeWindow.xaml.cs">
+      <DependentUpon>DodavanjaIzmenaAkcijeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DodavanjeIzmenaDodatnaUslugaWindow.xaml.cs">
+      <DependentUpon>DodavanjeIzmenaDodatnaUslugaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\NamestajWindow.xaml.cs">
       <DependentUpon>NamestajWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\ProdajaWindow.xaml.cs">
+      <DependentUpon>ProdajaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TipoviWindow.xaml.cs">
+      <DependentUpon>TipoviWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TipWindow.xaml.cs">
+      <DependentUpon>TipWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AkcijeWindow.xaml.cs">
+      <DependentUpon>AkcijeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\GenericSerializer.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="UI\DodatnaUslugaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\DodavanjaIzmenaAkcijeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\DodavanjeIzmenaDodatnaUslugaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -66,11 +102,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="UI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UI\NamestajWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ProdajaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\TipoviWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\TipWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\AkcijeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +170,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\tipoviNamestaja.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\prodajaNamestaja.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\korisnik.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\akcija.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\dodatnaUsluga.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

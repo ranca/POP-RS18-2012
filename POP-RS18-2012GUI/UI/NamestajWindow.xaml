@@ -1,18 +1,18 @@
 ﻿<Window x:Class="POP_RS18_2012GUI.UI.NamestajWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="NamestajWindow" Height="570" Width="525">
+        Title="Namestaj" Height="570" Width="525">
     <Grid HorizontalAlignment="Left" Width="515" Margin="0,0,0,1">
         <Label Content="Naziv:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="31,54,421,422"/>
         <Label Content="Sifra:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="31,121,421,359"/>
         <Label Content="Cena:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="31,198,421,0" Height="48" VerticalAlignment="Top"/>
         <Label Content="Kolicina u Magacinu:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="31,264,289,213"/>
-        <TextBox Name="tbNaziv" HorizontalAlignment="Left" Height="36" Margin="109,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="396" FontSize="20" />
-        <TextBox Name="tbSifra" HorizontalAlignment="Left" Height="36" Margin="109,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="396" FontSize="20" />
-        <TextBox Name="tbCena" HorizontalAlignment="Left" Height="36" Margin="109,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="396" FontSize="20" />
-        <TextBox Name="tbKolicina" HorizontalAlignment="Left" Height="36" Margin="249,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="256" FontSize="20" />
+        <TextBox Name="tbNaziv" HorizontalAlignment="Left" Height="36" Margin="109,55,0,0" TextWrapping="Wrap" Text="{Binding Path=Naziv}" VerticalAlignment="Top" Width="396" FontSize="20" />
+        <TextBox Name="tbSifra" HorizontalAlignment="Left" Height="36" Margin="109,122,0,0" TextWrapping="Wrap" Text="{Binding Path=Sifra}" VerticalAlignment="Top" Width="396" FontSize="20" />
+        <TextBox Name="tbCena" HorizontalAlignment="Left" Height="36" Margin="109,198,0,0" TextWrapping="Wrap" Text="{Binding Path=Cena}" VerticalAlignment="Top" Width="396" FontSize="20" />
+        <TextBox Name="tbKolicina" HorizontalAlignment="Left" Height="36" Margin="249,265,0,0" TextWrapping="Wrap" Text="{Binding Path=KolicinaUMagacinu}" VerticalAlignment="Top" Width="256" FontSize="20" />
         <Label Content="Tip Namestaja:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="31,330,340,154"/>
-        <ComboBox Name="cbTipNamestaja"  HorizontalAlignment="Left" Margin="180,330,0,0" VerticalAlignment="Top" Width="325" Height="37" FontSize="20"/>
+        <ComboBox Name="cbTipNamestaja"  HorizontalAlignment="Left" Margin="180,330,0,0" VerticalAlignment="Top" Width="325" Height="37" FontSize="20" SelectedItem="{Binding Path=TipNamestaja}"/>
         <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="325,424,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="SacuvajBtn"/>
         <Button Content="Izadji" HorizontalAlignment="Left" Margin="31,424,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="IzadjiBtn"/>
     </Grid>

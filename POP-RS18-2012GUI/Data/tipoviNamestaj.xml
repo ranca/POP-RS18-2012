@@ -2,7 +2,7 @@
 <ArrayOfTipNamestaja xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <TipNamestaja>
     <Id>0</Id>
-    <Naziv>Duseci</Naziv>
+    <Naziv>dormeo</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
@@ -12,27 +12,17 @@
   </TipNamestaja>
   <TipNamestaja>
     <Id>3</Id>
-    <Naziv>Platika</Naziv>
+    <Naziv>Prikolica</Naziv>
     <Obrisan>true</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>4</Id>
     <Naziv>Metal</Naziv>
-    <Obrisan>false</Obrisan>
+    <Obrisan>true</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>5</Id>
-    <Naziv>Plastika</Naziv>
-    <Obrisan>false</Obrisan>
-  </TipNamestaja>
-  <TipNamestaja>
-    <Id>6</Id>
-    <Naziv>Drvo</Naziv>
-    <Obrisan>false</Obrisan>
-  </TipNamestaja>
-  <TipNamestaja>
-    <Id>7</Id>
-    <Naziv>Iverica</Naziv>
+    <Naziv>Platika Tvrda</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
 </ArrayOfTipNamestaja>

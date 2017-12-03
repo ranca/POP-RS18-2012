@@ -1,0 +1,19 @@
+﻿<Window x:Class="POP_RS18_2012GUI.UI.AkcijeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP_RS18_2012GUI.UI"
+        mc:Ignorable="d"
+        Title="Akcije Namestaja" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Margin="475,175,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Dodaj" Margin="24,0,0,672" FontSize="20" Click="DodajButton_Click" HorizontalAlignment="Left" Width="210" Height="55" VerticalAlignment="Bottom"/>
+        <Button Content="Izmeni" Margin="24,142,0,571" FontSize="20" Click="IzmeniButton_Click" HorizontalAlignment="Left" Width="210"/>
+        <Button Content="Obrisi" Margin="24,242,0,472" FontSize="20" Click="ObrisiButton_Click" HorizontalAlignment="Left" Width="210"/>
+        <Button Content="Izaji" Margin="0,694,958,20" FontSize="20" Click="IzadjiButton_Click" RenderTransformOrigin="-6.788,0.525" HorizontalAlignment="Right" Width="210"/>
+        <DataGrid x:Name="dgAkcije" HorizontalAlignment="Left" Height="680" Margin="291,42,0,0" SelectedItem="{Binding Path=izabranaAkcija}" VerticalAlignment="Top" Width="874" />
+
+
+    </Grid>
+</Window>

@@ -2,38 +2,29 @@
 <ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Namestaj>
     <Id>1</Id>
-    <Naziv>Kabina</Naziv>
-    <Sifra />
-    <Cena>77777544545</Cena>
-    <KolicinaUMagacinu>10</KolicinaUMagacinu>
-    <TipNamestajaId>1</TipNamestajaId>
+    <Naziv>Dusek Klasicni</Naziv>
+    <Sifra>kd1</Sifra>
+    <Cena>3000</Cena>
+    <KolicinaUMagacinu>14</KolicinaUMagacinu>
+    <TipNamestajaId>0</TipNamestajaId>
     <Obrisan>false</Obrisan>
   </Namestaj>
   <Namestaj>
-    <Id>1</Id>
-    <Naziv>Krevet 123</Naziv>
-    <Sifra>sf1</Sifra>
-    <Cena>350</Cena>
-    <KolicinaUMagacinu>0</KolicinaUMagacinu>
-    <TipNamestajaId>1</TipNamestajaId>
+    <Id>2</Id>
+    <Naziv>Anatomski Jastuk</Naziv>
+    <Sifra>aj123</Sifra>
+    <Cena>4500</Cena>
+    <KolicinaUMagacinu>5420</KolicinaUMagacinu>
+    <TipNamestajaId>0</TipNamestajaId>
     <Obrisan>false</Obrisan>
   </Namestaj>
   <Namestaj>
     <Id>3</Id>
-    <Naziv>Vetrina</Naziv>
-    <Sifra />
-    <Cena>340</Cena>
-    <KolicinaUMagacinu>0</KolicinaUMagacinu>
-    <TipNamestajaId>1</TipNamestajaId>
-    <Obrisan>true</Obrisan>
-  </Namestaj>
-  <Namestaj>
-    <Id>4</Id>
-    <Naziv>Astal</Naziv>
-    <Sifra>ast123</Sifra>
+    <Naziv>Stavric Fotelja</Naziv>
+    <Sifra>sf3</Sifra>
     <Cena>3000</Cena>
-    <KolicinaUMagacinu>0</KolicinaUMagacinu>
-    <TipNamestajaId>1</TipNamestajaId>
+    <KolicinaUMagacinu>10</KolicinaUMagacinu>
+    <TipNamestajaId>4</TipNamestajaId>
     <Obrisan>false</Obrisan>
   </Namestaj>
 </ArrayOfNamestaj>

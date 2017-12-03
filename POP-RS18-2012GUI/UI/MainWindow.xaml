@@ -1,0 +1,46 @@
+﻿<Window x:Class="POP_RS18_2012GUI.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Namestaji" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <DataGrid Name="dgNamestaj" Width="900" FontSize="15" SelectedItem="{Binding Path=IzabranNamestaj}" Margin="267,42,25,372" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="20" Header=" Naziv" Binding="{Binding Path=Naziv}"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Šifra" Binding="{Binding Path=Sifra}"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Cena" Binding="{Binding Path=Cena}"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Količina u Magacinu" Binding="{Binding Path=KolicinaUMagacinu}" CanUserResize="False"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Tip Nameštaja" Binding="{Binding Path=TipNamestaja}"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button Content="Dodaj" Margin="24,42,958,672" FontSize="20" Click="DodajNamestajButton_Click"/>
+        <Button Content="Izmeni" Margin="24,142,958,571" FontSize="20" Click="IzmeniButton_Click"/>
+        <Button Content="Obrisi" Margin="24,242,958,472" FontSize="20" Click="ObrisiButton_Click"/>
+        <Button Content="Izaji" Margin="24,694,958,20" FontSize="20" Click="IzadjiButton_Click" RenderTransformOrigin="-6.788,0.525"/>
+        <Button Content="Tipovi Podešavanja" Margin="0,392,958,322" FontSize="20" Click="TipoviButton_Click" HorizontalAlignment="Right" Width="210"></Button>
+        <Button Content="Akcije Podešavanja" Margin="0,470,958,244" FontSize="20" HorizontalAlignment="Right" Width="210" Click="AkcijeButton_Click"/>
+        <Button Content="Prodaja" Margin="0,532,42,182" FontSize="20" HorizontalAlignment="Right" Width="210" Click="ProdajaButton_Click"/>
+        <Button Content="Dodatna Usluga" Margin="0,551,958,163" FontSize="20" HorizontalAlignment="Right" Width="210" Click="DodatnaUslugaButton_Click"/>
+
+        <GroupBox Header="Selektovani Nameštaj" FontSize="15" Height="321" HorizontalAlignment="Left" Margin="267,428,0,0" Name="gbSelektovaniNamestaj" VerticalAlignment="Top" Width="639" BorderBrush="#FF188BD1">
+            <Grid>
+                <Label Content="Naziv:" HorizontalAlignment="Left" Margin="26,22,0,0" VerticalAlignment="Top" FontSize="20"/>
+                <Label Content="{Binding ElementName=dgNamestaj, Path=SelectedItem.Naziv}" FontSize="20" Height="37" Margin="94,22,0,0" Name="lbNazivNamestaja" VerticalAlignment="Top" HorizontalAlignment="Left" Width="283"/>
+                <Label Content="Šifra:" HorizontalAlignment="Left" Margin="26,80,0,0" VerticalAlignment="Top" FontSize="20"/>
+                <Label Content="{Binding SelectedItem.Sifra, ElementName=dgNamestaj}" FontSize="20" Height="37" Margin="84,80,0,0" x:Name="lbSifraNamestaja" VerticalAlignment="Top" HorizontalAlignment="Left" Width="283"/>
+                <Label Content="Tip Namestaja:" HorizontalAlignment="Left" Margin="26,134,0,126" FontSize="20" RenderTransformOrigin="0.5,-0.108"/>
+                <Label Content="{Binding ElementName=dgNamestaj, Path=SelectedItem.TipNamestajaId}" FontSize="20" Height="37" Margin="171,136,0,0" x:Name="lbTipNamestaja" VerticalAlignment="Top" HorizontalAlignment="Left" Width="283"/>
+                <Label Content="Količina u magacinu:" HorizontalAlignment="Left" Margin="26,195,0,0" VerticalAlignment="Top" FontSize="20"/>
+                <Label Content="{Binding ElementName=dgNamestaj, Path=SelectedItem.KolicinaUMagacinu}" FontSize="20" Height="37" Margin="222,195,0,0" x:Name="lbKolicinaUMagacinuNamestaja" VerticalAlignment="Top" HorizontalAlignment="Left" Width="283"/>
+                <Label Content="Cena:" HorizontalAlignment="Left" Margin="30,252,0,0" VerticalAlignment="Top" FontSize="20"></Label>
+                <Label Content="{Binding SelectedItem.Cena, ElementName=dgNamestaj}" FontSize="20" Height="37" Margin="94,252,0,0" x:Name="lbCenaNamestaja" VerticalAlignment="Top" HorizontalAlignment="Left" Width="283"/>
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

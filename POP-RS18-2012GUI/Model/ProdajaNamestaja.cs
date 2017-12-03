@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,26 +9,104 @@ namespace POP_RS18_2012.Model
 {
     [Serializable]
 
-    public class ProdajaNamestaja
+    public class ProdajaNamestaja : INotifyPropertyChanged, ICloneable
     {
+        private int id;
+        private List<Namestaj> namestajZaProdaju;
+        private DateTime datumProdaje;
+        private string brojRacuna;
+        private string kupac;
+        private string dodatnaUsluga;
+        public double pdv = 0.02;
 
-        public int Id { get; set; }
 
-        public List<Namestaj> NamestajZaProdaju { get; set; }
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
 
-        public DateTime Datum_prodaje { get; set; }
+        public List<Namestaj> NamestajZaProdaju
+        {
+            get { return namestajZaProdaju; }
+            set
+            {
+                namestajZaProdaju = value;
+                OnPropertyChanged("NamestajZaProdaju");
+            }
+        }
 
-        public string BrojRacuna { get; set; }
+        public DateTime DatumProdaje
+        {
+            get { return datumProdaje; }
+            set
+            {
+                datumProdaje = value;
+                OnPropertyChanged("DatumProdaje");
+            }
+        }
 
-        public string Kupac { get; set; }
+        public string BrojRacuna
+        {
+            get { return brojRacuna; }
+            set
+            {
+                brojRacuna = value;
+                OnPropertyChanged("BrojRacuna");
+            }
 
-        public const double PDV = 0.02;
+        }
 
-        public List<DodatnaUsluga> DodatnaUsluga { get; set; }
+        public string Kupac
+        {
+            get { return kupac; }
+            set
+            {
+                kupac = value;
+                OnPropertyChanged("Kupac");
+            }
+        }
 
-        public double UkupanIznos { get; set; }
+        public string DodatnaUsluga
+        {
+            get { return dodatnaUsluga; }
+            set
+            {
+                dodatnaUsluga = value;
+                OnPropertyChanged("DodatnaUsluga");
+            }
+        }
 
-        public Akcija Akcija { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public object Clone()
+        {
+            return new ProdajaNamestaja()
+            {
+                Id = id,
+                NamestajZaProdaju = namestajZaProdaju,
+                DatumProdaje = datumProdaje,
+                BrojRacuna = brojRacuna,
+                Kupac = kupac,
+                DodatnaUsluga = dodatnaUsluga,
+                pdv = pdv
+
+            };
+        }
 
     }
 }
