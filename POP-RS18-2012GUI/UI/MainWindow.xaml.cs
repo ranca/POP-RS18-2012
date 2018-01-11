@@ -116,5 +116,12 @@ namespace POP_RS18_2012GUI.UI
             var prodajaNamestaja = new ProdajaWindow();
             prodajaNamestaja.ShowDialog();
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            var loginWindow = new LoginWindow();
+            this.Close();
+            loginWindow.ShowDialog();
+        }
     }
 }

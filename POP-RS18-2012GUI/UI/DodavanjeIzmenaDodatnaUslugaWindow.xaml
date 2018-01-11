@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Dodavanje/Izmena Dodatne Usluge" Height="270.122" Width="504.557">
     <Grid>
-        <Label Content="Naziv usluge:" HorizontalAlignment="Left" Margin="20,29,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <TextBox x:Name="tbNaziv" HorizontalAlignment="Left" Height="36" Margin="181,36,0,0" TextWrapping="Wrap" Text="{Binding Path=Naziv}" VerticalAlignment="Top" Width="303" FontSize="20" />
-        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="322,145,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="SacuvajBtn"/>
-        <Button Content="Izadji" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="IzadjiBtn"/>
-        <Label Content="Cena:" HorizontalAlignment="Left" Margin="58,87,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <TextBox x:Name="tbCena" HorizontalAlignment="Left" Height="36" Margin="181,94,0,0" TextWrapping="Wrap" Text="{Binding Path=Cena}" VerticalAlignment="Top" Width="303" FontSize="20" />
+        <Label Content="Naziv usluge:" HorizontalAlignment="Left" Margin="19,38,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Trajan Pro"/>
+        <TextBox x:Name="tbNaziv" HorizontalAlignment="Left" Height="36" Margin="181,36,0,0" TextWrapping="Wrap" Text="{Binding Path=Naziv}" VerticalAlignment="Top" Width="303" FontSize="20" FontFamily="Trajan Pro" />
+        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="322,145,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="SacuvajBtn" FontFamily="Trajan Pro" BorderThickness="5,5,5,6" BorderBrush="#FF2FD33E"/>
+        <Button Content="Izadji" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="IzadjiBtn" FontFamily="Trajan Pro" BorderBrush="#FFEC2929" BorderThickness="5"/>
+        <Label Content="Cena:" HorizontalAlignment="Left" Margin="95,90,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Trajan Pro"/>
+        <TextBox x:Name="tbCena" HorizontalAlignment="Left" Height="36" Margin="181,90,0,0" TextWrapping="Wrap" Text="{Binding Path=Cena}" VerticalAlignment="Top" Width="303" FontSize="20" />
 
     </Grid>
 </Window>

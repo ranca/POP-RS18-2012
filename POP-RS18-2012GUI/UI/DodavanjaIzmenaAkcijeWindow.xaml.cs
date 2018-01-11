@@ -47,9 +47,10 @@ namespace POP_RS18_2012GUI.UI
             dpDatumPocetka.DataContext = akcija;
             dpDatumZavrsetka.DataContext = akcija;
 
+            dgNamestaj.IsSynchronizedWithCurrentItem = true;
             tbPopust.DataContext = akcija;
             dgNamestaj.ItemsSource = savNamestaj;
-            dgNamestaj.IsSynchronizedWithCurrentItem = true;
+            
 
             ListaIzabranogNamestaja = akcija.NamestajNaPopustu;
 
@@ -62,10 +63,34 @@ namespace POP_RS18_2012GUI.UI
         {
             var listaAkcijaNamestaja = Projekat.Instance.Akcija;
             this.DialogResult = true;
+
+            double cenaNamestaja = 0;
+            for (int i = 0; i < akcija.NamestajNaPopustu.Count; i++)
+            {
+                cenaNamestaja += akcija.NamestajNaPopustu[i].Cena;
+            }
+
             switch (operacija)
             {
                 case Operacija.DODAVANJE:
                     akcija.Id = listaAkcijaNamestaja.Count + 1;
+                    var tbCena = double.Parse(tbPopust.Text);
+                    if (tbCena == 0)
+                    {
+                        MessageBox.Show("Polje za popust mora biti popunjeno!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
+                    for (int i = 0; i < akcija.NamestajNaPopustu.Count; i++)
+                    {
+                        akcija.NamestajNaPopustu[i].PopustCena = cenaNamestaja - ((cenaNamestaja * akcija.Popust) / 100);
+                        foreach (var namestaj in Projekat.Instance.Namestaj)
+                        {
+                            if (namestaj.Id == akcija.NamestajNaPopustu[i].Id)
+                            {
+                                namestaj.PopustCena = namestaj.Cena - ((namestaj.Cena * akcija.Popust) / 100);
+                            }
+                        }
+                    }
                     Akcija.Create(akcija);
                     break;
 
@@ -116,13 +141,6 @@ namespace POP_RS18_2012GUI.UI
             {
                 ListaIzabranogNamestaja.Remove((Namestaj)dgIzabranNamestaj.SelectedItems[0]);
             }
-            //foreach (Namestaj izabranNamestaj in dgIzabranNamestaj.SelectedItems)
-            //{
-            //    if (izabranNamestaj != null && ListaIzabranogNamestaja.Contains(izabranNamestaj))
-            //    {
-            //        dgIzabranNamestaj.ItemsSource. //Items.Remove(izabranNamestaj);
-            //    }
-            //}
         }
     }
 }

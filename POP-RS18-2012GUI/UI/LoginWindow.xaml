@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP_RS18_2012GUI.UI"
         mc:Ignorable="d"
-        Title="Prijava" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+        Title="Prijava" Height="300" Width="310" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Korisničko ime:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="10,47,126,172"/>
-        <Label Content="Lozinka:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="38,93,111,125"/>
-        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="25" Margin="153,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontSize="16"  />
-        <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="153,102,0,0" VerticalAlignment="Top" Width="129" Height="25" KeyDown="pbPassword_KeyDown"/>
-        <Button Name="PrijavaBtn" Content="Prijavi se" HorizontalAlignment="Left" Margin="84,149,0,0" VerticalAlignment="Top" Width="115" Height="31" FontSize="20" Click="PrijavaButton_Click"/>
+        <Label Content="Korisničko ime:" RenderTransformOrigin="1.907,3.524" Margin="10,55,126,172" FontFamily="Trajan Pro" FontSize="16"/>
+        <Label Content="Lozinka:" RenderTransformOrigin="1.907,3.524" FontSize="18" Margin="46,102,103,134" FontFamily="Trajan Pro"/>
+        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="25" Margin="163,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontSize="16"  />
+        <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="163,102,0,0" VerticalAlignment="Top" Width="129" Height="25" KeyDown="pbPassword_KeyDown"/>
+        <Button Name="PrijavaBtn" Content="Prijavi se" HorizontalAlignment="Left" Margin="155,188,0,0" VerticalAlignment="Top" Width="115" Height="31" FontSize="20" Click="PrijavaButton_Click" FontFamily="Trajan Pro" BorderThickness="5" BorderBrush="#FF323AE4"/>
+        <Button x:Name="Izadji" Content="Izadji" HorizontalAlignment="Left" Margin="19,188,0,0" VerticalAlignment="Top" Width="115" Height="31" FontSize="20" Click="IzadjiButton_Click" FontFamily="Trajan Pro" BorderBrush="#FFF54E34" BorderThickness="5"/>
     </Grid>
 </Window>

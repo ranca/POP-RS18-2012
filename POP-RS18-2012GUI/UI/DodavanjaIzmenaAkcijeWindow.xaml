@@ -17,6 +17,7 @@
         <DatePicker Name="dpDatumZavrsetka" SelectedDate="{Binding Path=DatumZavrsetka}" HorizontalAlignment="Left" Margin="943,26,0,0" VerticalAlignment="Top" Width="207" Height="32" FontFamily="Trajan Pro" FontSize="18"/>
         <GroupBox Header="Nameštaj" HorizontalAlignment="Left" Height="217" Margin="10,63,0,0" VerticalAlignment="Top" Width="1172" FontFamily="Trajan Pro" FontSize="18" BorderBrush="#FF0C46E0" BorderThickness="3">
             <DataGrid x:Name="dgNamestaj" CanUserAddRows="False" HorizontalAlignment="Left" Margin="10,10,0,9" Width="1138" SelectedItem="{Binding Path=izabranNamestaj}"/>
+
         </GroupBox>
         <GroupBox Header="Izabrani Nameštaj" HorizontalAlignment="Left" Height="217" Margin="10,335,0,0" VerticalAlignment="Top" Width="1172" FontFamily="Trajan Pro" FontSize="18" BorderBrush="#FF0C46E0" BorderThickness="3">
             <DataGrid x:Name="dgIzabranNamestaj" ItemsSource="{Binding Source=ListaIzabranogNamestaja}" CanUserAddRows="False" HorizontalAlignment="Left" Margin="10,10,0,9" Width="1138"/>

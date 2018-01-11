@@ -48,10 +48,22 @@ namespace POP_RS18_2012GUI.UI
             {
                 case Operacija.DODAVANJE:
                     dodatnaUsluga.Id = listaDodatnihUsluga.Count + 1;
-                    listaDodatnihUsluga.Add(dodatnaUsluga);
+                    DodatnaUsluga.Create(dodatnaUsluga);
                     break;
-            }
-            GenericSerializer.Serialize("dodatnaUsluga.xml", listaDodatnihUsluga);          
+
+                case Operacija.IZMENA:
+                    foreach (var du in listaDodatnihUsluga)
+                    {
+                        if (du.Id == dodatnaUsluga.Id)
+                        {
+                            du.Naziv = dodatnaUsluga.Naziv;
+                            du.Cena = dodatnaUsluga.Cena;
+                            break;
+                        }
+                    }
+                    DodatnaUsluga.Update(dodatnaUsluga); 
+                    break;
+            }     
         }
 
         private void IzadjiBtn(object sender, RoutedEventArgs e)

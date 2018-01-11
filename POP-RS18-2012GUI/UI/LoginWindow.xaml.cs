@@ -31,26 +31,50 @@ namespace POP_RS18_2012GUI.UI
 
         private void PrijavaButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            var listaKorisnika = Projekat.Instance.Korisnik;
-            var obrisan = false;
-            foreach (var k in listaKorisnika)
+            if(!tbUsername.Text.Equals("") && !pbPassword.Password.Equals(""))
             {
-
-                if (tbUsername.Text == "" || pbPassword.Password == "")
+                
+                var listaKorisnika = Projekat.Instance.Korisnik;
+                bool LoggedIn = false;
+                foreach (Korisnik k in listaKorisnika)
+                {
+                    if(tbUsername.Text.Equals(k.KorisnickoIme) && pbPassword.Password.Equals(k.Lozinka))
+                    {
+                        var MainWindow = new MainWindow();
+                        this.Close();
+                        MainWindow.ShowDialog();
+                    }
+                }
+                if (LoggedIn.Equals(false))
                 {
                     MessageBox.Show("Unesite ispravne podatke!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
-
                     return;
                 }
-                else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka && obrisan == k.Obrisan)
-                {
-                    var MainWindow = new MainWindow();
-                    this.Close();
-                    MainWindow.ShowDialog();
-                    
-                }
             }
+            else
+            {
+                MessageBox.Show("Popunite sva polja!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            //
+            //var obrisan = false;
+            //foreach (var k in listaKorisnika)
+            //{
+
+            //    if (tbUsername.Text == "" || pbPassword.Password == "")
+            //    {
+            //        MessageBox.Show("Unesite ispravne podatke!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            //        return;
+            //    }
+            //    else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka && obrisan == k.Obrisan)
+            //    {
+            //        var MainWindow = new MainWindow();
+            //        this.Close();
+            //        MainWindow.ShowDialog();
+
+            //    }
+            //}
         }
 
         private void pbPassword_KeyDown(object sender, KeyEventArgs e)
@@ -58,26 +82,37 @@ namespace POP_RS18_2012GUI.UI
             if (e.Key == Key.Return)
             {
 
-                var listaKorisnika = Projekat.Instance.Korisnik;
-
-                foreach (var k in listaKorisnika)
+                if (!tbUsername.Text.Equals("") && !pbPassword.Password.Equals(""))
                 {
 
-                    if (tbUsername.Text == "" || pbPassword.Password == "")
+                    var listaKorisnika = Projekat.Instance.Korisnik;
+                    bool LoggedIn = false;
+                    foreach (Korisnik k in listaKorisnika)
+                    {
+                        if (tbUsername.Text.Equals(k.KorisnickoIme) && pbPassword.Password.Equals(k.Lozinka))
+                        {
+                            var MainWindow = new MainWindow();
+                            this.Close();
+                            MainWindow.ShowDialog();
+                        }
+                    }
+                    if (LoggedIn.Equals(false))
                     {
                         MessageBox.Show("Unesite ispravne podatke!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
-
-                        return;
-                    }
-                    else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka)
-                    {
-                        var MainWindow = new MainWindow();
-                        this.Close();
-                        MainWindow.ShowDialog();
                         return;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Popunite sva polja!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
             }
+        }
+
+        private void IzadjiButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }  
 }

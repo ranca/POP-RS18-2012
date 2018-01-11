@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP_RS18_2012GUI.UI"
         mc:Ignorable="d"
-        Title="KorisniciWindow" Height="349.115" Width="600">
+        Title="KorisniciWindow" Height="500" Width="800">
     <Grid>
-        <DataGrid Name="dgKorisnici" HorizontalAlignment="Left" Height="264" Margin="189,44,0,0" SelectedItem="{Binding Path=IzabranKorisnik}" VerticalAlignment="Top" Width="393" />
-        <Label Content="Korisnici:" HorizontalAlignment="Left" Margin="189,18,0,0" VerticalAlignment="Top" Width="61"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="48,44,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="15" Click="DodajButton_Click"/>
-        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="48,100,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="15" Click="IzmeniButton_Click"/>
-        <Button Content="Obriši" HorizontalAlignment="Left" Margin="48,153,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="15" Click="ObrisiButton_Click"/>
-        <Button Content="Izađi" HorizontalAlignment="Left" Margin="48,265,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="15" Click="IzadjiButton_Click"/>
+        <DataGrid Name="dgKorisnici" HorizontalAlignment="Left" Height="404" Margin="189,44,0,0" SelectedItem="{Binding Path=IzabranKorisnik}" VerticalAlignment="Top" Width="582" FontSize="20" FontFamily="Trajan Pro" />
+        <Label Content="Korisnici:" HorizontalAlignment="Left" Margin="189,18,0,0" VerticalAlignment="Top" Width="80" FontFamily="Trajan Pro"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="48,44,0,0" VerticalAlignment="Top" Width="103" Height="50" FontSize="15" Click="DodajButton_Click" BorderThickness="5" BorderBrush="#FF27E838" FontFamily="Trajan Pro"/>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="48,128,0,0" VerticalAlignment="Top" Width="103" Height="50" FontSize="15" Click="IzmeniButton_Click" BorderBrush="#FF384EDC" BorderThickness="5" FontFamily="Trajan Pro"/>
+        <Button Content="Obriši" HorizontalAlignment="Left" Margin="48,206,0,0" VerticalAlignment="Top" Width="103" Height="50" FontSize="15" Click="ObrisiButton_Click" BorderThickness="5" FontFamily="Trajan Pro"/>
+        <Button Content="Izađi" HorizontalAlignment="Left" Margin="48,383,0,0" VerticalAlignment="Top" Width="103" Height="50" FontSize="16" Click="IzadjiButton_Click" BorderBrush="#FFF10E18" BorderThickness="5" FontFamily="Trajan Pro"/>
 
     </Grid>
 </Window>
