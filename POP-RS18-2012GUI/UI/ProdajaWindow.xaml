@@ -7,7 +7,16 @@
         mc:Ignorable="d"
         Title="Prodaja Namestaja" Height="800" Width="1200" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <DataGrid x:Name="dgProdaja" HorizontalAlignment="Left" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" Height="650" Margin="325,53,0,0" VerticalAlignment="Top" Width="819"/>
-        <Button Content="Dodaj" Margin="52,72,932,644" FontSize="20" Click="DodajRacunButton_Click"/>
+        <Label Content="Kupac :" HorizontalAlignment="Left" Margin="54,66,0,0" VerticalAlignment="Top" FontFamily="Trajan Pro" FontSize="20"/>
+        <TextBox Name="tbKupac" HorizontalAlignment="Left" Height="34" Margin="175,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="361" FontSize="20" FontFamily="Trajan Pro"/>
+        <GroupBox Header="Dodatne Usluge" HorizontalAlignment="Left" Height="380" Margin="894,128,0,0" VerticalAlignment="Top" Width="246" FontFamily="Trajan Pro" FontSize="20" BorderBrush="#FF0097FF" BorderThickness="3,3,3,5"/>
+        <GroupBox Header="Korpa" HorizontalAlignment="Left" Height="380" Margin="39,128,0,0" VerticalAlignment="Top" Width="768" FontFamily="Trajan Pro" FontSize="20" BorderBrush="#FF0097FF" BorderThickness="3">
+            <DataGrid HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="733" FontSize="18"/>
+        </GroupBox>
+        <Button Content=" Dodajte &#xD;&#xA;Proizvod&#xD;&#xA; u Korpu" HorizontalAlignment="Left" Margin="217,514,0,0" VerticalAlignment="Top" Width="212" Height="124" BorderBrush="#FF08B008" BorderThickness="5" FontFamily="Trajan Pro" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Obriši Proizvod" HorizontalAlignment="Left" Margin="469,514,0,0" VerticalAlignment="Top" Width="212" Height="124" BorderBrush="#FFEE0B0B" BorderThickness="5" FontFamily="Trajan Pro" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Izvrši Kupovinu" HorizontalAlignment="Left" Margin="950,634,0,0" VerticalAlignment="Top" Width="216" Height="102" FontFamily="Trajan Pro" FontSize="20" BorderBrush="#FF1425CF" Click="Button_Click" BorderThickness="3" FontWeight="Bold"/>
+        <DatePicker HorizontalAlignment="Left" Margin="818,66,0,0" VerticalAlignment="Top" Height="34" Width="284" FontFamily="Trajan Pro" FontSize="20"/>
+        <Label Content="Datum Prodaje :" HorizontalAlignment="Left" Margin="616,66,0,0" VerticalAlignment="Top" FontFamily="Trajan Pro" FontSize="20"/>
     </Grid>
 </Window>

@@ -5,18 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP_RS18_2012GUI.UI"
         mc:Ignorable="d"
-        Title="Dodavanje/Izmena Akcije" Height="622.5" Width="789">
+        Title="Dodavanje/Izmena Akcije" Height="700" Width="1200">
     <Grid>
-        <Label Content="Datum početka:" HorizontalAlignment="Left" Margin="20,78,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <TextBox x:Name="tbPopust" HorizontalAlignment="Left" Height="36" Margin="181,378,0,0" TextWrapping="Wrap" Text="{Binding Path = Popust}" VerticalAlignment="Top" Width="563" FontSize="20" />
-        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="606,497,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="SacuvajBtn"/>
-        <Button Content="Izadji" HorizontalAlignment="Left" Margin="10,497,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="IzadjiBtn"/>
-        <Label Content="Datum završetka:" HorizontalAlignment="Left" Margin="20,174,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <Label Content="Namestaj na popustu:" HorizontalAlignment="Left" Margin="20,274,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <Label Content="Popust:" HorizontalAlignment="Left" Margin="20,371,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <DatePicker x:Name="dpDatumPocetka" HorizontalAlignment="Left" Margin="224,87,0,0" VerticalAlignment="Top" Width="520" Height="34"/>
-        <DatePicker x:Name="dpDatumZavrsetka" HorizontalAlignment="Left" Margin="224,183,0,0" VerticalAlignment="Top" Width="520" Height="34"/>
-        <ComboBox x:Name="cbNamestajNaPopustu" HorizontalAlignment="Left" Margin="276,285,0,0" FontSize="20" SelectedItem="{Binding Path=Namestaj}" VerticalAlignment="Top" Width="468" Height="32"/>
+        <Label Content="Datum početka:" HorizontalAlignment="Left" Margin="23,25,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Trajan Pro" Background="#FFC5F0C5"/>
+        <TextBox x:Name="tbPopust" HorizontalAlignment="Left" Height="40" Margin="596,557,0,0" TextWrapping="Wrap" Text="{Binding Path = Popust}" VerticalAlignment="Top" Width="178" FontSize="20" FontFamily="Trajan Pro" />
+        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="1001,557,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="SacuvajBtn" FontFamily="Trajan Pro" BorderBrush="#FF21D30F" BorderThickness="5"/>
+        <Button Content="Izadji" HorizontalAlignment="Left" Margin="23,557,0,0" VerticalAlignment="Top" Width="165" Height="84" FontSize="20" FontWeight="Bold" Click="IzadjiBtn" BorderBrush="#FFCD2A2A" BorderThickness="5" FontFamily="Trajan Pro"/>
+        <Label Content="Datum završetka:" HorizontalAlignment="Left" Margin="739,26,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Trajan Pro" Background="#FFFFC1C1"/>
+        <Label Content="Popust:" HorizontalAlignment="Left" Margin="462,557,0,0" VerticalAlignment="Top" FontSize="25" Background="#FFECC3FF" FontFamily="Trajan Pro"/>
+        <DatePicker Name="dpDatumPocetka" SelectedDate="{Binding Path=DatumPocetka}" HorizontalAlignment="Left" Margin="228,25,0,0" VerticalAlignment="Top" Width="204" Height="32" FontFamily="Trajan Pro" FontSize="18"/>
+        <DatePicker Name="dpDatumZavrsetka" SelectedDate="{Binding Path=DatumZavrsetka}" HorizontalAlignment="Left" Margin="943,26,0,0" VerticalAlignment="Top" Width="207" Height="32" FontFamily="Trajan Pro" FontSize="18"/>
+        <GroupBox Header="Nameštaj" HorizontalAlignment="Left" Height="217" Margin="10,63,0,0" VerticalAlignment="Top" Width="1172" FontFamily="Trajan Pro" FontSize="18" BorderBrush="#FF0C46E0" BorderThickness="3">
+            <DataGrid x:Name="dgNamestaj" CanUserAddRows="False" HorizontalAlignment="Left" Margin="10,10,0,9" Width="1138" SelectedItem="{Binding Path=izabranNamestaj}"/>
+        </GroupBox>
+        <GroupBox Header="Izabrani Nameštaj" HorizontalAlignment="Left" Height="217" Margin="10,335,0,0" VerticalAlignment="Top" Width="1172" FontFamily="Trajan Pro" FontSize="18" BorderBrush="#FF0C46E0" BorderThickness="3">
+            <DataGrid x:Name="dgIzabranNamestaj" ItemsSource="{Binding Source=ListaIzabranogNamestaja}" CanUserAddRows="False" HorizontalAlignment="Left" Margin="10,10,0,9" Width="1138"/>
+        </GroupBox>
+        <Button Content="Izbaci" HorizontalAlignment="Left" Margin="422,292,0,334" Width="152" FontFamily="Trajan Pro" FontSize="16" BorderBrush="#FFBB3346" BorderThickness="9" Click="IzbaciBtn"/>
+        <Button Content="Ubaci" HorizontalAlignment="Left" Margin="622,292,0,334" Width="152" FontFamily="Trajan Pro" FontSize="16" BorderBrush="#FF1DCD1D" BorderThickness="9" Click="UbaciBtn"/>
 
     </Grid>
 </Window>

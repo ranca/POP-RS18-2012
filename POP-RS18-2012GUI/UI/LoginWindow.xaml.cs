@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,36 +24,60 @@ namespace POP_RS18_2012GUI.UI
         //private Korisnik korisnik;
         public LoginWindow()
         {
-            InitializeComponent();        
+            InitializeComponent();
+
+            tbUsername.Focus();
         }
 
         private void PrijavaButton_Click(object sender, RoutedEventArgs e)
         {
+            
             var listaKorisnika = Projekat.Instance.Korisnik;
-
+            var obrisan = false;
             foreach (var k in listaKorisnika)
             {
-                if (tbUsername.Text != k.KorisnickoIme || pbPassword.Password != k.Lozinka)
+
+                if (tbUsername.Text == "" || pbPassword.Password == "")
                 {
                     MessageBox.Show("Unesite ispravne podatke!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                 
-                  
-                } else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka)
-                {
-                    
-                    var MainWindow = new MainWindow();
-                    MainWindow.ShowDialog();
-                    this.Close();
-                    return;
 
+                    return;
                 }
-                return;
-                
-
+                else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka && obrisan == k.Obrisan)
+                {
+                    var MainWindow = new MainWindow();
+                    this.Close();
+                    MainWindow.ShowDialog();
+                    
+                }
             }
-            return;
-
         }
-    }
+
+        private void pbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+
+                var listaKorisnika = Projekat.Instance.Korisnik;
+
+                foreach (var k in listaKorisnika)
+                {
+
+                    if (tbUsername.Text == "" || pbPassword.Password == "")
+                    {
+                        MessageBox.Show("Unesite ispravne podatke!", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                        return;
+                    }
+                    else if (tbUsername.Text == k.KorisnickoIme && pbPassword.Password == k.Lozinka)
+                    {
+                        var MainWindow = new MainWindow();
+                        this.Close();
+                        MainWindow.ShowDialog();
+                        return;
+                    }
+                }
+            }
+        }
+    }  
 }

@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POP_RS18_2012.Model
+namespace POP_RS18_2012GUI.Model
 {
     [Serializable]
 
     public class ProdajaNamestaja : INotifyPropertyChanged, ICloneable
     {
         private int id;
-        private List<Namestaj> namestajZaProdaju;
+        private List<int> namestajZaProdajuId;
+        private List<int> dodatnaUslugaId;
         private DateTime datumProdaje;
         private string brojRacuna;
         private string kupac;
-        private string dodatnaUsluga;
-        public double pdv = 0.02;
+        private double cena;
+        private const double PDV = 0.02;
+        private double ukupnaCena;
+        private bool obrisan;
+        private ObservableCollection<DodatnaUsluga> dodatnaUsluge;
+        private ObservableCollection<Namestaj> namestajZaProdaja;
 
 
         public int Id
@@ -30,13 +36,13 @@ namespace POP_RS18_2012.Model
             }
         }
 
-        public List<Namestaj> NamestajZaProdaju
+        public List<int> NamestajZaProdajuId
         {
-            get { return namestajZaProdaju; }
+            get { return namestajZaProdajuId; }
             set
             {
-                namestajZaProdaju = value;
-                OnPropertyChanged("NamestajZaProdaju");
+                namestajZaProdajuId = value;
+                OnPropertyChanged("NamestajZaProdajuId");
             }
         }
 
@@ -61,23 +67,52 @@ namespace POP_RS18_2012.Model
 
         }
 
-        public string Kupac
+        public double Cena
         {
-            get { return kupac; }
+            get { return cena; }
             set
             {
-                kupac = value;
-                OnPropertyChanged("Kupac");
+                cena = value;
+                OnPropertyChanged("Cena");
             }
         }
 
-        public string DodatnaUsluga
+        public double UkupnaCena
         {
-            get { return dodatnaUsluga; }
+            get { return ukupnaCena; }
             set
             {
-                dodatnaUsluga = value;
-                OnPropertyChanged("DodatnaUsluga");
+                ukupnaCena = value;
+                OnPropertyChanged("UkupnaCena");
+            }
+        }
+
+        public bool Obrisan
+        {
+            get { return obrisan; }
+            set
+            {
+                obrisan = value;
+                OnPropertyChanged("Obrisan");
+            }
+        }
+
+        public List<int> DodatnaUslugaId
+        {
+            get { return dodatnaUslugaId; }
+            set
+            {
+                dodatnaUslugaId = value;
+                OnPropertyChanged("DodatnaUslugaId");
+            }
+        }
+
+        public string Kupac
+        {
+            get { return kupac; }
+            set {
+                kupac = value;
+                OnPropertyChanged("Kupac");
             }
         }
 
@@ -98,12 +133,12 @@ namespace POP_RS18_2012.Model
             return new ProdajaNamestaja()
             {
                 Id = id,
-                NamestajZaProdaju = namestajZaProdaju,
+                NamestajZaProdajuId = namestajZaProdajuId,
                 DatumProdaje = datumProdaje,
                 BrojRacuna = brojRacuna,
                 Kupac = kupac,
-                DodatnaUsluga = dodatnaUsluga,
-                pdv = pdv
+                Cena = cena
+                
 
             };
         }

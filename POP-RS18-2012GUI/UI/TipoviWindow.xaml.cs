@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;
@@ -32,7 +31,7 @@ namespace POP_RS18_2012GUI.UI
         {
             InitializeComponent();
 
-            ICView = CollectionViewSource.GetDefaultView(Projekat.Instance.TipoviNamestaja);
+            ICView = CollectionViewSource.GetDefaultView(Projekat.Instance.TipNamestaja);
             ICView.Filter = ViewFilter;
 
             dgTipovi.IsSynchronizedWithCurrentItem = true;
@@ -62,8 +61,8 @@ namespace POP_RS18_2012GUI.UI
             var tipNamestajaWindow = new TipWindow(kopija, TipWindow.Operacija.IZMENA);
             if (tipNamestajaWindow.ShowDialog() != true)
             {
-                int index = Projekat.Instance.TipoviNamestaja.IndexOf(IzabranTip);
-                Projekat.Instance.TipoviNamestaja[index] = kopija;
+                int index = Projekat.Instance.TipNamestaja.IndexOf(IzabranTip);
+                Projekat.Instance.TipNamestaja[index] = kopija;
             }
         }
 
@@ -80,14 +79,14 @@ namespace POP_RS18_2012GUI.UI
 
         private void ObrisiButton_Click(object sender, RoutedEventArgs e)
         {
-            var listaTipova = Projekat.Instance.TipoviNamestaja;
+            var listaTipova = Projekat.Instance.TipNamestaja;
             if(MessageBox.Show($"Da li zelite da obrisete: { IzabranTip.Naziv }", "Brisanje", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 foreach (var tip in listaTipova)
                 {
                     if(tip.Id == IzabranTip.Id)
                     {
-                        tip.Obrisan = true;
+                        TipNamestaja.Delete(IzabranTip);
                         ICView.Refresh();
                         break;
                     }

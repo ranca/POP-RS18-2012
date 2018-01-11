@@ -1,38 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTipNamestaja xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <TipNamestaja>
-    <Id>0</Id>
-    <Naziv>Duseci</Naziv>
+    <Id>1</Id>
+    <Naziv>Klub i set stolovi</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
-    <Id>1</Id>
-    <Naziv>Sofa</Naziv>
+    <Id>2</Id>
+    <Naziv>Komadni namestaj za sedelje</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>3</Id>
-    <Naziv>Platika</Naziv>
-    <Obrisan>true</Obrisan>
+    <Naziv>Vitrine i regali</Naziv>
+    <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>4</Id>
-    <Naziv>Metal</Naziv>
+    <Naziv>Tapacirani nameštaj - garniture</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>5</Id>
-    <Naziv>Plastika</Naziv>
+    <Naziv>Police</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>6</Id>
-    <Naziv>Drvo</Naziv>
+    <Naziv>TV Police</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
   <TipNamestaja>
     <Id>7</Id>
-    <Naziv>Iverica</Naziv>
+    <Naziv>Kreveti</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>8</Id>
+    <Naziv>Decije sobe</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>9</Id>
+    <Naziv>Komode, fiokari i nocni orm.</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>10</Id>
+    <Naziv>Garderoberi i ormani</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>11</Id>
+    <Naziv>Kuhinje</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>12</Id>
+    <Naziv>Trpezarije</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>13</Id>
+    <Naziv>Predsoblja</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>14</Id>
+    <Naziv>Kancelarijski i radni nameštaj</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>15</Id>
+    <Naziv>Dodaci</Naziv>
+    <Obrisan>false</Obrisan>
+  </TipNamestaja>
+  <TipNamestaja>
+    <Id>16</Id>
+    <Naziv>Dušeci</Naziv>
     <Obrisan>false</Obrisan>
   </TipNamestaja>
 </ArrayOfTipNamestaja>

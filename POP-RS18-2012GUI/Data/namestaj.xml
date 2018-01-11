@@ -2,29 +2,200 @@
 <ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Namestaj>
     <Id>1</Id>
-    <Naziv>Dusek Klasicni</Naziv>
-    <Sifra>kd1</Sifra>
-    <Cena>3000</Cena>
-    <KolicinaUMagacinu>14</KolicinaUMagacinu>
-    <TipNamestajaId>0</TipNamestajaId>
+    <Naziv>KLUB STO UNO 90x5</Naziv>
+    <Sifra>UNO950</Sifra>
+    <Cena>5860</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
     <Obrisan>false</Obrisan>
+    <PopustCena>4490</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
   </Namestaj>
   <Namestaj>
     <Id>2</Id>
-    <Naziv>Anatomski Jastuk</Naziv>
-    <Sifra>aj123</Sifra>
-    <Cena>4500</Cena>
-    <KolicinaUMagacinu>5420</KolicinaUMagacinu>
-    <TipNamestajaId>0</TipNamestajaId>
+    <Naziv>KLUB STO CRAFT ST</Naziv>
+    <Sifra>CRAFTST</Sifra>
+    <Cena>12720</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>1</TipNamestajaId>
     <Obrisan>false</Obrisan>
+    <PopustCena>10176</PopustCena>
+    <ProdataKolicina>6</ProdataKolicina>
   </Namestaj>
   <Namestaj>
     <Id>3</Id>
-    <Naziv>Stavric Fotelja</Naziv>
-    <Sifra>sf3</Sifra>
-    <Cena>3000</Cena>
-    <KolicinaUMagacinu>10</KolicinaUMagacinu>
+    <Naziv>FOTELJA KAPRI</Naziv>
+    <Sifra>FOTK</Sifra>
+    <Cena>12440</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>2</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>9952</PopustCena>
+    <ProdataKolicina>2</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>4</Id>
+    <Naziv>RELAX FOTELJA</Naziv>
+    <Sifra>RF013</Sifra>
+    <Cena>7220</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>2</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>4490</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>5</Id>
+    <Naziv>KLIZNI GARDEROBER WINNER PLUS</Naziv>
+    <Sifra>21019083</Sifra>
+    <Cena>36910</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>21.99</PopustCena>
+    <ProdataKolicina>6</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>6</Id>
+    <Naziv>VITRINA LEVANO LVNM01</Naziv>
+    <Sifra>21019887</Sifra>
+    <Cena>27690</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>17990</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>7</Id>
+    <Naziv>REGAL APUS</Naziv>
+    <Sifra>11003055</Sifra>
+    <Cena>18800</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>9990</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>8</Id>
+    <Naziv>VITRINA KENT VS</Naziv>
+    <Sifra>11005739</Sifra>
+    <Cena>17060</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>11890</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>9</Id>
+    <Naziv>UGAONA GARNITURA KULMA + TABURE</Naziv>
+    <Sifra>21019518</Sifra>
+    <Cena>43120</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
     <TipNamestajaId>4</TipNamestajaId>
     <Obrisan>false</Obrisan>
+    <PopustCena>27990</PopustCena>
+    <ProdataKolicina>6</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>10</Id>
+    <Naziv>LEŽAJ TEO</Naziv>
+    <Sifra>21014721</Sifra>
+    <Cena>28470</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>4</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>18990</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>11</Id>
+    <Naziv>TV POLICA KENT 120</Naziv>
+    <Sifra>11005737</Sifra>
+    <Cena>10240</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>5</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>7090</PopustCena>
+    <ProdataKolicina>2</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>12</Id>
+    <Naziv>TV POLICA AMOS TV2P</Naziv>
+    <Sifra>11005715</Sifra>
+    <Cena>7360</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>5</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>5888</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>13</Id>
+    <Naziv>BRACNI KREVET</Naziv>
+    <Sifra>21019083</Sifra>
+    <Cena>36910</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>6</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>21.99</PopustCena>
+    <ProdataKolicina>6</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>14</Id>
+    <Naziv>VITRINA LEVANO LVNM01</Naziv>
+    <Sifra>21019887</Sifra>
+    <Cena>27690</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>6</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>17990</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>15</Id>
+    <Naziv>FOTELJA KAPRI</Naziv>
+    <Sifra>FOTK</Sifra>
+    <Cena>12440</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>7</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>9952</PopustCena>
+    <ProdataKolicina>2</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>16</Id>
+    <Naziv>RELAX FOTELJA</Naziv>
+    <Sifra>RF013</Sifra>
+    <Cena>7220</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>7</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>4490</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>17</Id>
+    <Naziv>KLIZNI GARDEROBER WINNER PLUS</Naziv>
+    <Sifra>21019083</Sifra>
+    <Cena>36910</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>21.99</PopustCena>
+    <ProdataKolicina>6</ProdataKolicina>
+  </Namestaj>
+  <Namestaj>
+    <Id>18</Id>
+    <Naziv>VITRINA LEVANO LVNM01</Naziv>
+    <Sifra>21019887</Sifra>
+    <Cena>27690</Cena>
+    <KolicinaUMagacinu>50</KolicinaUMagacinu>
+    <TipNamestajaId>3</TipNamestajaId>
+    <Obrisan>false</Obrisan>
+    <PopustCena>17990</PopustCena>
+    <ProdataKolicina>1</ProdataKolicina>
   </Namestaj>
 </ArrayOfNamestaj>

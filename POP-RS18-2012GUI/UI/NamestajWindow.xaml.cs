@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;
@@ -38,7 +37,7 @@ namespace POP_RS18_2012GUI.UI
             this.namestaj = namestaj;
             this.operacija = operacija;
 
-            cbTipNamestaja.ItemsSource = Projekat.Instance.TipoviNamestaja;
+            cbTipNamestaja.ItemsSource = Projekat.Instance.TipNamestaja;
 
             tbNaziv.DataContext = namestaj;
             tbSifra.DataContext = namestaj;
@@ -72,8 +71,8 @@ namespace POP_RS18_2012GUI.UI
             switch (operacija)
             {
                 case Operacija.DODAVANJE:
-                    namestaj.Id = listaNamestaja.Count + 1;              
-                    listaNamestaja.Add(namestaj);
+                    namestaj.Id = listaNamestaja.Count + 1;
+                    Namestaj.Create(namestaj);
                     break;
 
                 case Operacija.IZMENA:
@@ -84,8 +83,10 @@ namespace POP_RS18_2012GUI.UI
                             n.Naziv = namestaj.Naziv;
                             n.TipNamestaja = namestaj.TipNamestaja;
                             n.Cena = namestaj.Cena;
+                            n.Sifra = namestaj.Sifra;
                             n.KolicinaUMagacinu = namestaj.KolicinaUMagacinu;
                             n.TipNamestajaId = namestaj.TipNamestajaId;
+                            Namestaj.Update(namestaj);
                             break;
                         }
                     }
@@ -93,15 +94,11 @@ namespace POP_RS18_2012GUI.UI
                     break;
 
             }
-            GenericSerializer.Serialize("namestaj.xml", listaNamestaja);
+            //GenericSerializer.Serialize("namestaj.xml", listaNamestaja);
 
             this.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
 
     }

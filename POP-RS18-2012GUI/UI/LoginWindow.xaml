@@ -9,8 +9,8 @@
     <Grid>
         <Label Content="Korisničko ime:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="10,47,126,172"/>
         <Label Content="Lozinka:" RenderTransformOrigin="1.907,3.524" FontSize="20" Margin="38,93,111,125"/>
-        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="25" Margin="153,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontSize="16" />
-        <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="153,102,0,0" VerticalAlignment="Top" Width="129" Height="25"/>
-        <Button Content="Prijavi se" HorizontalAlignment="Left" Margin="84,149,0,0" VerticalAlignment="Top" Width="115" Height="31" FontSize="20" Click="PrijavaButton_Click"/>
+        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="25" Margin="153,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontSize="16"  />
+        <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="153,102,0,0" VerticalAlignment="Top" Width="129" Height="25" KeyDown="pbPassword_KeyDown"/>
+        <Button Name="PrijavaBtn" Content="Prijavi se" HorizontalAlignment="Left" Margin="84,149,0,0" VerticalAlignment="Top" Width="115" Height="31" FontSize="20" Click="PrijavaButton_Click"/>
     </Grid>
 </Window>

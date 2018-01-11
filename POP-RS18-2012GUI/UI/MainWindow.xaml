@@ -21,10 +21,9 @@
         <Button Content="Izmeni" Margin="24,142,958,571" FontSize="20" Click="IzmeniButton_Click"/>
         <Button Content="Obrisi" Margin="24,242,958,472" FontSize="20" Click="ObrisiButton_Click"/>
         <Button Content="Izaji" Margin="24,694,958,20" FontSize="20" Click="IzadjiButton_Click" RenderTransformOrigin="-6.788,0.525"/>
-        <Button Content="Tipovi Podešavanja" Margin="0,392,958,322" FontSize="20" Click="TipoviButton_Click" HorizontalAlignment="Right" Width="210"></Button>
-        <Button Content="Akcije Podešavanja" Margin="0,470,958,244" FontSize="20" HorizontalAlignment="Right" Width="210" Click="AkcijeButton_Click"/>
+        <Button Content="Napredna Podešavanja" Margin="0,496,958,218" FontSize="20" Click="NaprednaPodesavanjaButton_Click" HorizontalAlignment="Right" Width="210" ToolTip="Podešavanja tipova, dodatnih usluga i korisnika (ukoliko ste administrator)."></Button>
+        <Button Content="Akcije Podešavanja" Margin="0,332,958,382" FontSize="20" HorizontalAlignment="Right" Width="210" Click="AkcijeButton_Click"/>
         <Button Content="Prodaja" Margin="0,532,42,182" FontSize="20" HorizontalAlignment="Right" Width="210" Click="ProdajaButton_Click"/>
-        <Button Content="Dodatna Usluga" Margin="0,551,958,163" FontSize="20" HorizontalAlignment="Right" Width="210" Click="DodatnaUslugaButton_Click"/>
 
         <GroupBox Header="Selektovani Nameštaj" FontSize="15" Height="321" HorizontalAlignment="Left" Margin="267,428,0,0" Name="gbSelektovaniNamestaj" VerticalAlignment="Top" Width="639" BorderBrush="#FF188BD1">
             <Grid>

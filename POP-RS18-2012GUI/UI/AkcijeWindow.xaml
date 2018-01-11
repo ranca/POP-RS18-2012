@@ -12,7 +12,15 @@
         <Button Content="Izmeni" Margin="24,142,0,571" FontSize="20" Click="IzmeniButton_Click" HorizontalAlignment="Left" Width="210"/>
         <Button Content="Obrisi" Margin="24,242,0,472" FontSize="20" Click="ObrisiButton_Click" HorizontalAlignment="Left" Width="210"/>
         <Button Content="Izaji" Margin="0,694,958,20" FontSize="20" Click="IzadjiButton_Click" RenderTransformOrigin="-6.788,0.525" HorizontalAlignment="Right" Width="210"/>
-        <DataGrid x:Name="dgAkcije" HorizontalAlignment="Left" Height="680" Margin="291,42,0,0" SelectedItem="{Binding Path=izabranaAkcija}" VerticalAlignment="Top" Width="874" />
+       
+
+        <DataGrid Name="dgAkcije" Width="900" FontSize="15" SelectedItem="{Binding Path=izabranaAkcija}" Margin="291,42,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="20" Header=" Datum Početka" Binding="{Binding Path=DatumPocetka}"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Datum Završetka" Binding="{Binding Path=DatumZavrsetka}"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="20" Header=" Popust (%)" Binding="{Binding Path=Popust}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
 
     </Grid>

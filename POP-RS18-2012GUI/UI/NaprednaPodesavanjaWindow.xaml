@@ -1,0 +1,15 @@
+﻿<Window x:Class="POP_RS18_2012GUI.UI.NaprednaPodesavanjaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP_RS18_2012GUI.UI"
+        mc:Ignorable="d"
+        Title="NaprednaPodesavanjaWindow" Height="250" Width="800">
+    <Grid>
+        <Button Content="     Tipovi&#xD;Podešavanja" HorizontalAlignment="Left" Margin="42,65,0,0" VerticalAlignment="Top" Width="199" Height="90" Click="TipoviButton_Click" FontSize="20" FontFamily="Trajan Pro" ToolTip="Dodavanje, brisanje ili izmena postojećeg tipa."/>
+        <Button Content="Dodatna Usluga&#xA;   Podešavanja" HorizontalAlignment="Left" Margin="549,65,0,0" VerticalAlignment="Top" Width="199" Height="90" Click="DodatnaUslugaButton_Click" FontSize="20" FontFamily="Trajan Pro" ToolTip="Dodavanje, brisanje ili izmena postojeće dodatne usluge."/>
+        <Button Content="  Korisnici&#xA;Podešavanja" HorizontalAlignment="Left" Margin="295,65,0,0" VerticalAlignment="Top" Width="199" Height="90" Click="KorisniciButton_Click" FontSize="20" FontFamily="Trajan Pro" ToolTip="Dodavanje, brisanje ili izmena postojećeg tipa."/>
+
+    </Grid>
+</Window>

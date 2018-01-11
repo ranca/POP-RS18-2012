@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;
@@ -49,7 +48,7 @@ namespace POP_RS18_2012GUI.UI
 
         public void SacuvajBtn (object sender, RoutedEventArgs e)
         {
-            var listaTipNamestaj = Projekat.Instance.TipoviNamestaja;
+            var listaTipNamestaj = Projekat.Instance.TipNamestaja;
 
             switch (operacija)
             {
@@ -64,7 +63,8 @@ namespace POP_RS18_2012GUI.UI
                             break;
                         }
                     }
-                    listaTipNamestaj.Add(tipNamestaja);
+                    //listaTipNamestaj.Add(tipNamestaja);
+                    TipNamestaja.Create(tipNamestaja);
                     break;
 
                 case Operacija.IZMENA:
@@ -72,7 +72,7 @@ namespace POP_RS18_2012GUI.UI
                     {
                         if (tn.Id == tipNamestaja.Id)
                         {
-                            tn.Naziv = tipNamestaja.Naziv;
+                            TipNamestaja.Update(tipNamestaja);
                             break;
                         }
                     }

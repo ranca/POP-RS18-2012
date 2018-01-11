@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.UI;
 using POP_RS18_2012GUI.Utils;
 using System;
@@ -40,8 +39,10 @@ namespace POP_RS18_2012GUI.UI
             dgNamestaj.IsSynchronizedWithCurrentItem = true;
             dgNamestaj.DataContext = this;
             dgNamestaj.ItemsSource = ICView;
-            dgNamestaj.SelectedIndex = 1;
-            
+            dgNamestaj.SelectedIndex = 0;
+            //dgNamestaj.Rows[0].Selected = true;
+
+
         }
 
         private bool ViewFilter(object obj)
@@ -63,8 +64,8 @@ namespace POP_RS18_2012GUI.UI
         {
             
             Namestaj kopija = (Namestaj)IzabranNamestaj.Clone();
-            var NamestajProzor = new NamestajWindow(kopija, NamestajWindow.Operacija.IZMENA);
-            NamestajProzor.ShowDialog();
+            var NamestajW = new NamestajWindow(kopija, NamestajWindow.Operacija.IZMENA);
+            NamestajW.ShowDialog();
 
         }
 
@@ -78,21 +79,23 @@ namespace POP_RS18_2012GUI.UI
                 {
                     if (n.Id == IzabranNamestaj.Id)
                     {
-                        n.Obrisan = true;
+                        Namestaj.Delete(IzabranNamestaj);
                         ICView.Refresh();
                         break;
                     }
                 }
 
-                GenericSerializer.Serialize("namestaj.xml", listaNamestaja);
+               // GenericSerializer.Serialize("namestaj.xml", listaNamestaja);
 
             }
 
         }
-        private void TipoviButton_Click(object sender, RoutedEventArgs e)
+        private void NaprednaPodesavanjaButton_Click(object sender, RoutedEventArgs e)
         {
-            var tipoviNamestaja = new TipoviWindow();
-            tipoviNamestaja.ShowDialog();
+            
+            var naprednaPodesavanja = new NaprednaPodesavanjaWindow();         
+            naprednaPodesavanja.ShowDialog();
+            
         }
 
         private void IzadjiButton_Click(object sender, RoutedEventArgs e)
@@ -103,14 +106,9 @@ namespace POP_RS18_2012GUI.UI
         private void AkcijeButton_Click(object sender, RoutedEventArgs e)
         {
             var akcijeNamestaja = new AkcijeWindow();
+
             akcijeNamestaja.ShowDialog();
             
-        }
-
-        private void DodatnaUslugaButton_Click(object sender, RoutedEventArgs e)
-        {
-            var dodatneUsluge = new DodatnaUslugaWindow();
-            dodatneUsluge.ShowDialog();
         }
 
         private void ProdajaButton_Click(object sender, RoutedEventArgs e)

@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;

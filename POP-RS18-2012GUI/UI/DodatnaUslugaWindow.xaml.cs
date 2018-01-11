@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;
@@ -65,16 +64,20 @@ namespace POP_RS18_2012GUI.UI
             var listaDodatnihUsluga = Projekat.Instance.DodatnaUsluga;
             if (MessageBox.Show($"Da li zelite da izbrisete: {izabranaUsluga.Naziv}", "Brisanje", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                foreach (var du in listaDodatnihUsluga)
-                {
-                    if (du.Id == izabranaUsluga.Id)
-                    {
-                        du.Obrisan = true;
-                        ICView.Refresh();
-                        break;
-                    }
-                }
-                GenericSerializer.Serialize("dodatnaUsluga.xml", listaDodatnihUsluga);
+
+                DodatnaUsluga.Delete(izabranaUsluga);
+                               
+                //RAD SA XMLOM SADA IZNAD IMAMO RAD SA BAZOM
+                //foreach (var du in listaDodatnihUsluga)
+                //{
+                //    if (du.Id == izabranaUsluga.Id)
+                //    {
+                //        du.Obrisan = true;
+                //        ICView.Refresh();
+                //        break;
+                //    }
+                //}
+                //GenericSerializer.Serialize("dodatnaUsluga.xml", listaDodatnihUsluga);
             }
         }
 

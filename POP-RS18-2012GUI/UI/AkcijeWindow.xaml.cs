@@ -1,5 +1,4 @@
-﻿using POP_RS18_2012.Model;
-using POP_RS18_2012GUI.Model;
+﻿using POP_RS18_2012GUI.Model;
 using POP_RS18_2012GUI.Utils;
 using System;
 using System.Collections.Generic;
@@ -36,6 +35,8 @@ namespace POP_RS18_2012GUI.UI
             dgAkcije.IsSynchronizedWithCurrentItem = true;
             dgAkcije.DataContext = this;
             dgAkcije.ItemsSource = ICView;
+
+            izabranaAkcija = dgAkcije.SelectedItem as Akcija;
         }
 
         private bool ViewFilter(object obj)
@@ -45,11 +46,10 @@ namespace POP_RS18_2012GUI.UI
 
         private void DodajButton_Click(object sender, RoutedEventArgs e)
         {
-            var novaAkcijaNamestaja = new Akcija();
-            {
-            };
+            Akcija novaAkcijaNamestaja = new Akcija();
             var diaw = new DodavanjaIzmenaAkcijeWindow(novaAkcijaNamestaja, DodavanjaIzmenaAkcijeWindow.Operacija.DODAVANJE);
             diaw.ShowDialog();
+
         }
 
         private void IzmeniButton_Click(object sender, RoutedEventArgs e)
@@ -73,11 +73,11 @@ namespace POP_RS18_2012GUI.UI
                     if (a.Id == izabranaAkcija.Id)
                     {
                         a.Obrisan = true;
+                        Akcija.Delete(izabranaAkcija);
                         ICView.Refresh();
                         break;
                     }
                 }
-                GenericSerializer.Serialize("akcija.xml", listaAkcija);
             }
         }
     
